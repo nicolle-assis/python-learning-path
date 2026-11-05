@@ -12,10 +12,12 @@
 <p align="center">
   <a href="#about">About</a> •
   <a href="#roadmap">Roadmap</a> •
+  <a href="#repository-structure">Structure</a> •
   <a href="#getting-started">Getting started</a> •
   <a href="#code-conventions">Conventions</a> •
   <a href="#resources">Resources</a> •
-  <a href="#author">Author</a>
+  <a href="#author">Author</a> •
+  <a href="#license">License</a>
 </p>
 
 ---
@@ -24,34 +26,59 @@
 
 My personal path to learning Python while studying **Computer Networks**. The goal is to become a **network analyst** and, later, a **cloud engineer**.
 
-This repository combines two sources of study, so nothing gets done twice:
+This repository combines two sources of study, so no exercise is done twice:
 
 - the **university course** (Programming Languages), which sets the pace and the exam content;
-- the **Ensina Dev Python path**, used for extra practice with instantly checked challenges.
+- the **Cisco NetAcad course Python Essentials 1 (PE1)**, used for extra practice, module tests and preparation for the **PCEP** certification.
 
-Every exercise is saved here, together with small projects that apply Python to networking.
+Every solved exercise is saved here, together with small projects that apply Python to networking.
 
 > Project status: **in progress**. New exercises are added as the course advances.
 
 ## Roadmap
 
-- [ ] **Unit 1:** sequential structure (variables, data types, operators, input and output)
+- [ ] **Unit 1:** sequential structure
+  - [x] First program and indentation
+  - [x] Variables and data types
+  - [x] Input and output
   - [x] Arithmetic operators and operator precedence
-  - [ ] `input()` and `print()` exercises
-  - [ ] Type conversion (`int`, `float`, `str`)
+  - [ ] Type conversion
+  - [ ] Built-in functions
 - [ ] **Unit 2:** conditional structures (`if`, `elif`, `else`)
 - [ ] **Unit 3:** loops (`while`, `for`)
-- [ ] **Unit 4:** data structures (lists, matrices, dictionaries)
-- [ ] **Unit 5:** functions, scope, recursion and files
+- [ ] **Unit 4:** data structures (lists, matrices, tuples, dictionaries)
+- [ ] **Unit 5:** functions, scope, exceptions, recursion and files
+- [ ] **PCEP** certification (Certified Entry-Level Python Programmer)
 - [ ] **Networking projects**
-  - [ ] Subnet calculator (network, broadcast and number of hosts)
-  - [ ] IP address validator
+  - [ ] Address calculator (mask, network, broadcast and usable hosts)
+  - [ ] Device inventory
   - [ ] Log file reader
 
-Detailed status per topic is tracked in [progress.md](progress.md).
+## Repository structure
 
+```
+python-learning-path/
+├── assets/                    # images used in this README
+├── unit01-sequential/
+│   └── extras/                # exercises solved so far
+├── unit02-conditionals/
+├── unit03-loops/
+├── unit04-data-structures/
+├── unit05-functions/
+├── networking-projects/       # Python applied to networking
+├── .gitignore
+└── README.md
+```
 
-When the same exercise appears in both the textbook and the Ensina Dev path, I solve it only once and keep it in the folder where it fits best.
+Inside each unit, exercises are grouped by origin:
+
+| Folder | What it holds |
+|---|---|
+| `textbook/` | Exercises from the university textbook |
+| `netacad/` | Labs from NetAcad PE1 |
+| `extras/` | My own practice and networking exercises |
+
+Folders are created as I add the first file to each one. When the same exercise appears in both the textbook and NetAcad PE1, I solve it once and keep it in the folder where it fits best.
 
 ## Getting started
 
@@ -73,7 +100,7 @@ git clone https://github.com/nicolle-assis/python-learning-path.git
 cd python-learning-path
 
 # 3. Run any exercise
-python unit01-sequential/extras/operator_precedence.py
+python unit01-sequential/extras/step04_ex02_exponent_and_precedence.py
 ```
 
 On Windows, if `python` is not recognized, try `py` instead.
@@ -83,6 +110,7 @@ On Windows, if `python` is not recognized, try `py` instead.
 - Code, comments, variable names and messages are written in **English**.
 - Names follow **PEP 8**: `snake_case`, with the unit in the name when it helps (for example `height_cm`).
 - Indentation uses **4 spaces**, never tabs.
+- Files are named `stepXX_exYY_short_name.py`, where the numbers follow the study order.
 - Commit messages are short and in the imperative, for example `Add unit 1 exercise 4: average of four grades`.
 
 ## Built with
@@ -94,7 +122,8 @@ On Windows, if `python` is not recognized, try `py` instead.
 ## Resources
 
 - University textbook: *Linguagem de Programação*, by Pietro Martins de Oliveira (Unicesumar)
-- [Ensina Dev: Python path](https://ensinadev.com.br/trilhas/55675eef-b18c-421d-adb5-01ecb95aa57e)
+- [Cisco NetAcad: Python Essentials 1 (PE1)](https://www.netacad.com/)
+- [Python Institute: PCEP certification](https://pythoninstitute.org/certification/pcep-certification-entry-level/)
 - [Official Python tutorial](https://docs.python.org/3/tutorial/)
 - [PEP 8: Style Guide for Python Code](https://peps.python.org/pep-0008/)
 
